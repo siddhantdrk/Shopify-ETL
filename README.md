@@ -13,7 +13,6 @@ shopify_etl/
 │   └── analytics/         # Analytics and metrics code
 ├── tests/                 # Test files
 ├── config/                # Configuration files
-└── notebooks/             # Jupyter notebooks for analysis
 ```
 
 ## Setup
