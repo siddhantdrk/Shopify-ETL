@@ -99,7 +99,7 @@ Both tables use the ReplacingMergeTree engine which allows for efficient handlin
 1. Start ClickHouse server
 2. Run the ETL pipeline:
 ```bash
-python src/main.py
+python pipeline.py
 ```
 
 ## Development
