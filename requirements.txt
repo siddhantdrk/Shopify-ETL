@@ -1,0 +1,11 @@
+clickhouse-driver==0.2.6
+pydantic==2.5.2
+python-dotenv==1.0.0
+pandas==2.1.4
+numpy==1.26.2
+plotly==5.18.0
+faker==20.1.0
+pytest==7.4.3
+black==23.11.0
+isort==5.12.0
+mypy==1.7.1 

@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  clickhouse-server:
+    image: clickhouse/clickhouse-server
+    container_name: clickhouse-server
+    ports:
+      - "8123:8123"  # HTTP interface
+      - "9000:9000"  # Native protocol
+    environment:
+      CLICKHOUSE_DB: default            # Default database to use
+      CLICKHOUSE_USER: default          # Default user
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: 1
+      CLICKHOUSE_PASSWORD: ""           # Remove password for default user
+    volumes:
+      - clickhouse-data:/var/lib/clickhouse
+      
+volumes:
+  clickhouse-data:
+    driver: local
