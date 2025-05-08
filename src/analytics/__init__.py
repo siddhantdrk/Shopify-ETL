@@ -1,5 +1,5 @@
 """
-Analytics module for Shopify data analysis and visualization
+Analytics package for Shopify data analysis
 """
 
 from .shopify_analytics import ShopifyAnalytics

@@ -29,3 +29,4 @@ build/
 # Local development settings
 *.sqlite3
 *.db
+analytics_results
