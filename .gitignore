@@ -29,6 +29,3 @@ build/
 # Local development settings
 *.sqlite3
 *.db
-
-# Generated data
-data/generated_orders.json 
