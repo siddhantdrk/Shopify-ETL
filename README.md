@@ -15,6 +15,10 @@ shopify_etl/
 ├── config/                # Configuration files
 ```
 
+## Flow Diagram
+The project's data flow is illustrated in the following diagram:
+![ETL Flow Diagram](flow_diagram.png)
+
 ## Setup
 1. Create a virtual environment:
 ```bash
@@ -91,6 +95,9 @@ CREATE TABLE order_items (
 ) ENGINE = ReplacingMergeTree()
 ORDER BY (id, order_id)
 PRIMARY KEY (id, order_id)
+
+
+
 ```
 
 Both tables use the ReplacingMergeTree engine which allows for efficient handling of duplicate data and updates.
