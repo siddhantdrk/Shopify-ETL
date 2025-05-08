@@ -68,7 +68,7 @@ class ShopifyDataExtractor:
             logger.error(f"Error parsing datetime {dt_str}: {str(e)}")
             raise
 
-    def _extract_order(self, order_data: Dict[str, Any]) -> Order:
+    def extract_order(self, order_data: Dict[str, Any]) -> Order:
         """
         Extract and validate a single order
         
@@ -132,7 +132,7 @@ class ShopifyDataExtractor:
 
                     for order_data in data['orders']:
                         try:
-                            order = self._extract_order(order_data)
+                            order = self.extract_order(order_data)
                             all_orders.append(order)
                         except Exception as e:
                             logger.error(f"Error processing order in {file_path}: {str(e)}")

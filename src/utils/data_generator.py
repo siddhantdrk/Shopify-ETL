@@ -580,8 +580,10 @@ class ShopifyOrderGenerator:
 def main():
     """Example usage of the order generator"""
     generator = ShopifyOrderGenerator()
-    orders = generator.generate_orders(1000)  # Generate 1000 orders
-    generator.save_to_json(orders, "data/generated_orders.json")
+    orders = generator.generate_orders(50)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    json_file_path = f"data/generated_orders_{timestamp}.json"
+    generator.save_to_json(orders, json_file_path)
 
 if __name__ == "__main__":
     main() 
