@@ -17,7 +17,8 @@ shopify_etl/
 
 ## Flow Diagram
 The project's data flow is illustrated in the following diagram:
-![ETL Flow Diagram](flow_diagram.png)
+
+<img src="flow_diagram.png" alt="ETL Flow Diagram" width="300" height="400"/>
 
 ## Setup
 1. Create a virtual environment:
