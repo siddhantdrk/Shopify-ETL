@@ -35,7 +35,7 @@ class ETLPipeline:
     def _on_new_order(self, order_data: Dict[str, Any]):
         try:
             self.event_queue.put(order_data)
-            logger.info(f"Queued new order: {order_data.get('id')}")
+            logger.info(f"Queued new event with {len(order_data.get('orders', []))} orders")
         except Exception as e:
             logger.error(f"Error queuing order: {str(e)}")
 

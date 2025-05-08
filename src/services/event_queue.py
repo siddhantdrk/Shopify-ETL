@@ -31,7 +31,7 @@ class InMemoryEventQueue(EventQueue):
     def put(self, event: Dict[str, Any]):
         try:
             self.queue.put(event, block=False)
-            logger.debug(f"Added event to queue: {event.get('id')}")
+            logger.debug(f"Added event to queue with {len(event.get('orders', []))} orders")
         except Full:
             logger.warning("Event queue is full, dropping event")
 
